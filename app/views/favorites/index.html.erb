@@ -1,8 +1,16 @@
 <h1>Favorites#index</h1>
 <p>Find me in app/views/favorites/index.html.erb</p>
 
-<%= @favorites.each do |favorite| %>
+<%
+=begin%>
+ <% @user.favorites.each do |user| %>
   <div>
-    @favorite.users
+    <h1><%= user.first_name %> <%= user.last_name %></h1>
+    <p><strong>Batch No</strong> <%= user.batch_number %></p>
+    <p><strong>Current City:</strong> <%= user.current_city %></p>
+    <p><strong>Batch date:</strong> <%= user.batch_date %></p>
+    <p><%= user.occupation %> @<strong><%= user.company_name %></strong></p>
   </div>
-<%= end %>
+<%end %> 
+<%
+=end%>
