@@ -1,3 +1,6 @@
+<% if @user.photo.attached? %>
+<%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :thumb %>
+<% end %>
 <h1><%= @user.first_name %> <%= @user.last_name %></h1>
 <p><strong>Batch No</strong> <%= @user.batch_number %></p>
 <p><strong>Current City:</strong> <%= @user.current_city %></p>
