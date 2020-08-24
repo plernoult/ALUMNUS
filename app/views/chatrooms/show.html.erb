@@ -1,0 +1,9 @@
+<h1>Chatrooms#show</h1>
+<p>Find me in app/views/chatrooms/show.html.erb</p>
+
+<h1>#<%= @chatroom.id %></h1>
+<div id="messages" data-chatroom-id="<%= @chatroom.id %>">
+  <% @chatroom.messages.each do |message| %>
+    <%= render'messages/message' %>
+  <% end %>
+</div>
