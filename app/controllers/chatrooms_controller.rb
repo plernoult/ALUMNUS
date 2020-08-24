@@ -7,4 +7,8 @@ class ChatroomsController < ApplicationController
     @chatroom = Chatroom.find(params[:id])
     @message = Message.new
   end
+
+  def new
+    @chatroom = Chatroom.new
+  end
 end
