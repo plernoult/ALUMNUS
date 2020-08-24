@@ -4,6 +4,33 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+     <div>
+     <%= f.label :first_name %>
+     <%= f.text_field :first_name, autofocus: true %>
+     <%= f.label :last_name %>
+     <%= f.text_field :last_name, autofocus: true %>
+    </div>
+    <br>
+     <%= f.input :current_city,
+                 required: true,
+                 autofocus: true,
+                 input_html: { autocomplete: "current city" }%>
+    <%= f.input :batch_number,
+                 required: true,
+                 autofocus: true,
+                 input_html: { autocomplete: "batch number" }%>
+    <%= f.input  :batch_date,
+                 required: true,
+                 autofocus: true,
+                 input_html: { autocomplete: "batch date" }%>
+    <%= f.input  :occupation,
+                 required: true,
+                 autofocus: true,
+                 input_html: { autocomplete: "occupation" }%>
+    <%= f.input  :company_name,
+                 required: true,
+                 autofocus: true,
+                 input_html: { autocomplete: "company name" }%>
     <%= f.input :email,
                 required: true,
                 autofocus: true,
@@ -15,10 +42,11 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
+
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "Sign up", class: "btn btn-primary"%>
   </div>
 <% end %>
 
