@@ -1,7 +1,9 @@
 <ul>
   <% @users.each do |user| %>
     <div class="card-product">
-  <img src="https://secure.meetupstatic.com/photos/event/1/d/a/3/600_465607587.jpeg" />
+    <% if user.photo.attached? %>
+    <%= cl_image_tag user.photo.key, crop: :scale %>
+    <% end %>
   <div class="card-product-infos">
     <h2><%= user.first_name %> <%= user.last_name %></h2><p><%= link_to "Full Profile", user_path(user) %></p>
     <p><strong>Batch No</strong> <%= user.batch_number %></p>
