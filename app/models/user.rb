@@ -8,5 +8,5 @@ class User < ApplicationRecord
   has_many :chatrooms, through: :messages
   geocoded_by :current_city
   after_validation :geocode, if: :will_save_change_to_current_city?
-  has_many :favorites
+  has_many :favorites, dependent: :destroy
 end

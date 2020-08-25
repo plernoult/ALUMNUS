@@ -18,13 +18,9 @@ class UsersController < ApplicationController
        OR concat(last_name,first_name) ILIKE :query \
        OR current_city ILIKE :query \
        OR occupation ILIKE :query \
-       OR batch_number = :query"
-
-       if params[:query].to_i != 0
-        @users = User.where(sql_query, query: "#{params[:query]}")
-      else
-        @users = User.where(sql_query, query: "%#{params[:query]}%") 
-      end
+       OR batch_number = :query_int"
+    
+        @users = User.where(sql_query, query: "%#{params[:query]}%", query_int: params[:query].to_i) 
       
     else
       @users = User.all
@@ -38,7 +34,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-  params.require(:user).permit(:photo, :favorite)
+    params.require(:user).permit(:photo, :favorite)
   end
 
 end
