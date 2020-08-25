@@ -1,0 +1,11 @@
+<div class="container forms-layout">
+
+  <div class="form-inputs">
+  <h1 class="form-title">New Chat</h1>
+
+  <%= simple_form_for( @chatroom) do |f| %>
+    <%= f.input :name %>
+    <%= f.submit  class: "submit-btn btn btn-primary" %>
+  <% end %>
+  </div>
+</div>
