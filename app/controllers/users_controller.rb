@@ -1,6 +1,13 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
+    @current_city = current_user.current_city
+    @prox_users = User.near(@current_city , 10)
+
+    if @prox_users.length == 1
+      @users = User.all
+    else
+      @users = @prox_users
+    end
   end
 
   def show
