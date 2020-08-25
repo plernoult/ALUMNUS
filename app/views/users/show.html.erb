@@ -13,3 +13,13 @@
 <%= link_to "Add to favorites", user_favorites_path(@user), method: :post, class: "btn btn-primary" %>
 </div>
 
+
+<% if current_user.favorites.where(favorite_user: @user, user: current_user).any? %>
+  <%= link_to "Remove from favorites",
+   user_favorite_path(@user), 
+   method: :delete, 
+   data: {confirm: "Are you sure?"}, class: "btn btn-primary" %>
+<% else %>
+  <%= link_to "Add to favorites", user_favorites_path(@user), method: :post, class: "btn btn-primary" %>
+<%end%>
+
