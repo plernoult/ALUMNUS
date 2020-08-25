@@ -2,5 +2,10 @@
 <p>Find me in app/views/chatrooms/index.html.erb</p>
 
 <% @chatrooms.each do |chatroom| %>
-  <%= chatroom.name %>
+<% if %>
+<% current_user.first_name == chatroom.receiver_name %>
+  <%= chatroom.sender_name %>
+<% else %>
+  <%= chatroom.receiver_name %>
+<% end %>
 <% end %>
