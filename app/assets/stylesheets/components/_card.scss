@@ -30,3 +30,15 @@
 .card-product .card-product-infos {
   padding: 16px;
 }
+
+.profile-picture img {
+  border-radius: 50%;
+}
+
+.contain-profile {
+  padding-top: 10px;
+  margin: auto !important;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align: center;
+  background-color: white;
+}

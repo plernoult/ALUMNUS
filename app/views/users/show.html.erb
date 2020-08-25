@@ -1,6 +1,9 @@
-<% if @user.photo.attached? %>
-<%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :thumb %>
-<% end %>
+<div class="container contain-profile">
+  <div class="profile-picture">
+    <% if @user.photo.attached? %>
+    <%= cl_image_tag @user.photo.key, height: 300, width: 300, crop: :thumb %>
+    <% end %>
+  </div>
 <h1><%= @user.first_name %> <%= @user.last_name %></h1>
 <p><strong>Batch No</strong> <%= @user.batch_number %></p>
 <p><strong>Current City:</strong> <%= @user.current_city %></p>
@@ -11,3 +14,4 @@
 <% else %>
   <%= link_to "Chat", chatroom_path(@chatroom), class: "btn btn-primary" %>
 <% end %>
+</div>
