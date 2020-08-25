@@ -10,10 +10,6 @@
 <p><strong>Batch date:</strong> <%= @user.batch_date %></p>
 <p><%= @user.occupation %> @<strong><%= @user.company_name %></strong></p>
 <%= link_to "Chat", open_chatrooms_path(@user), class: "btn btn-primary" %>
-<%= link_to "Add to favorites", user_favorites_path(@user), method: :post, class: "btn btn-primary" %>
-</div>
-
-
 <% if current_user.favorites.where(favorite_user: @user, user: current_user).any? %>
   <%= link_to "Remove from favorites",
    user_favorite_path(@user), 
@@ -22,4 +18,8 @@
 <% else %>
   <%= link_to "Add to favorites", user_favorites_path(@user), method: :post, class: "btn btn-primary" %>
 <%end%>
+</div>
+
+
+
 
