@@ -8,6 +8,28 @@ class UsersController < ApplicationController
     else
       @users = @prox_users
     end
+
+    if params[:query].present?
+      sql_query = "first_name ILIKE :query \
+       OR last_name ILIKE :query \
+       OR concat(first_name,' ',last_name) ILIKE :query \
+       OR concat(last_name,' ',first_name) ILIKE :query \
+       OR concat(first_name,last_name) ILIKE :query \
+       OR concat(last_name,first_name) ILIKE :query \
+       OR current_city ILIKE :query \
+       OR occupation ILIKE :query \
+       OR batch_number = :query"
+
+       if params[:query].to_i != 0
+        @users = User.where(sql_query, query: "#{params[:query]}")
+      else
+        @users = User.where(sql_query, query: "%#{params[:query]}%") 
+      end
+      
+    else
+      @users = User.all
+    end
+
   end
 
   def show
@@ -16,7 +38,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-  params.require(:user).permit(:photo)
+  params.require(:user).permit(:photo, :favorite)
   end
 
 end
