@@ -1,11 +1,17 @@
 <h1>Chatrooms#index</h1>
 <p>Find me in app/views/chatrooms/index.html.erb</p>
+<ul>
+  <% @chatrooms.each do |chatroom| %>
+  <% if %>
+  <% current_user.first_name == chatroom.receiver_name %>
+  <div class="card-prod">
+    <p>Your chat with @<%= link_to chatroom.sender_name, open_chatrooms_path(chatroom.sender_id) %></p>
+     </div>
+  <% else %>
+  <div class="card-prod">
+    <p>Your chat with @<%= link_to chatroom.receiver_name, open_chatrooms_path(chatroom.receiver_id) %></p>
+  </div>
+  <% end %><br>
+  <% end %>
 
-<% @chatrooms.each do |chatroom| %>
-<% if %>
-<% current_user.first_name == chatroom.receiver_name %>
-  <%= chatroom.sender_name %>
-<% else %>
-  <%= chatroom.receiver_name %>
-<% end %>
-<% end %>
+
