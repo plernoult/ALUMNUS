@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show] do 
     resources :favorites, only: [:index, :create, :destroy]
   end
-  root to: 'pages#home'
+  root to: 'users#index'
   resources :chatrooms, only: [:new, :index, :show] do
     collection do
       get 'open/:user_id', to: 'chatrooms#open', as: 'open'
