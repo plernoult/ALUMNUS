@@ -1,14 +1,49 @@
-<h1>Favorites#index</h1>
-<p>Find me in app/views/favorites/index.html.erb</p>
-
-
- <% @favorites.each do |favorite| %>
-  <div>
-    <h1><%= favorite.favorite_user.first_name %> <%= favorite.favorite_user.last_name %></h1>
-    <p><strong>Batch No</strong> <%= favorite.favorite_user.batch_number %></p>
-    <p><strong>Current City:</strong> <%= favorite.favorite_user.current_city %></p>
-    <p><strong>Batch date:</strong> <%= favorite.favorite_user.batch_date %></p>
-    <p><%= favorite.favorite_user.occupation %> @<strong><%= favorite.favorite_user.company_name %></strong></p>
+<div class="container-fluid content ml-2">
+  <h1 id="titlefav">My favorites</h1>
+</div>
+<div class="container-fluid content">
+  <div class="cards row mx-0">
+    <div class="col-12">
+        <% @favorites.each do |favorite| %>
+        <div class="card-trip card-product favcard col-8 px-0 mr-3 mb-3">
+            <%= cl_image_tag favorite.favorite_user.photo.key, crop: :scale %>
+          <div class="fav-info">
+            <h1><%= favorite.favorite_user.first_name %> <%= favorite.favorite_user.last_name %></h1>
+            <h3><%= favorite.favorite_user.current_city %></h3>
+            <p><strong>Batch No</strong> <%= favorite.favorite_user.batch_number %></p>
+            <p><strong>Batch date:</strong> <%= favorite.favorite_user.batch_date %></p>
+            <p><%= favorite.favorite_user.occupation %> @<strong><%= favorite.favorite_user.company_name %></strong></p>
+          </div>
+        </div>
+      <%end %>
+    </div>
   </div>
-<%end %>  
+</div>
 
+
+<% if false %>
+
+  <div class="container-fluid content">
+    <div class="cards row mx-0">
+      <div class="col-7">
+        <div class="row mx-2">
+      <% @facilities.each do |facility| %>
+        <%= link_to facility, class:"card-index-link" do %>
+          <div class="card-trip col-12 px-0 mr-3 mb-2">
+            <% if facility.photo.attached? %>
+            <%= cl_image_tag facility.photo.key, crop: :fill, class:"img-index"%>
+        <% end %>
+      <%end%>
+          <div class="card-trip-infos">
+              <div>
+                <h2 class="card-title"><%= link_to facility.name, facility_path(facility), class:"h5-card" %></h2>
+                <p class="card-text"><%= facility.address %></p>
+              </div>
+              <h2 class="card-trip-pricing"><%= facility.price %> €</h2>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+
+<% end %>
