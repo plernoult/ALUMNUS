@@ -1,6 +1,8 @@
 class ChatroomsController < ApplicationController
   def index
-    @chatrooms = Chatroom.all
+    @user = current_user
+    @chatrooms_receiver = Chatroom.where(receiver_id: @user.id)
+    @chatrooms_sender = Chatroom.where(sender_id: @user.id)
   end
 
   def show
