@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     @prox_users = User.near(@current_city , 10)
 
     if @prox_users.length == 1
-      @users = User.all
+      @users = User.where.not(id: current_user.id)
     else
       @users = @prox_users
     end
@@ -19,11 +19,11 @@ class UsersController < ApplicationController
        OR current_city ILIKE :query \
        OR occupation ILIKE :query \
        OR batch_number = :query_int"
-    
-        @users = User.where(sql_query, query: "%#{params[:query]}%", query_int: params[:query].to_i) 
-      
+
+        @users = User.where(sql_query, query: "%#{params[:query]}%", query_int: params[:query].to_i)
+
     else
-      @users = User.all
+      @users = User.where.not(id: current_user.id)
     end
 
   end
