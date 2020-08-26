@@ -1,10 +1,70 @@
+.bordure {
+  margin-top:100px;
+  margin-bottom: 60px !important;
+}
+
+.speech-bubble {
+  position: relative;
+  background: #99f0a7;
+  border-radius: .4em;
+}
+
+.speech-bubble:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-left-color: #99f0a7;
+  border-right: 0;
+  margin-top: -7px;
+  margin-right: -7px;
+}
+
+.speech-bubbly {
+  position: relative;
+  background: #d7d5d5;
+  border-radius: .10em;
+}
+
+.speech-bubbly:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-left-color: #d7d5d5;
+  border-right: 0;
+  margin-top: -7px;
+  margin-right: -7px;
+}
+
+
+
+#new_message {
+  position: fixed !important;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
 .profile {
+  z-index:10;
   background-color:white;
   display:flex;
   justify-content: flex-start;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
+  align-items: center;
+  position: fixed !important;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  text-align: center;
+
 }
 .profile p {
   font-size: 40px;
@@ -32,7 +92,7 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   align-items: center;
-  width:400px;
+  width:auto;
   padding-left: 20px;
 }
 
