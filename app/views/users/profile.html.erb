@@ -1,0 +1,23 @@
+<div class="container">
+
+ <div class="profile-picture">
+    <% if current_user.photo.attached? %>
+    <%= cl_image_tag current_user.photo.key, height: 300, width: 300, crop: :thumb %>
+    <% end %>
+  </div>
+<h1><%= current_user.first_name %> <%= current_user.last_name %></h1>
+<p><strong>Batch No</strong> <%= current_user.batch_number %></p>
+<p><strong>Current City:</strong> <%= current_user.current_city %></p>
+<p><strong>Batch date:</strong> <%= current_user.batch_date %></p>
+<p><%= current_user.occupation %> @<strong><%= current_user.company_name %></strong></p>
+
+<p><strong>Bio:</strong></p><br>
+<p><%= current_user.bio %></p>
+
+<%= link_to  "Edit profile", edit_user_registration_path %>
+
+</div>
+
+
+
+</div>
