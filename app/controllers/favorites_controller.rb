@@ -12,7 +12,7 @@ class FavoritesController < ApplicationController
     
       if @favorite.save
         current_user.favorites << @favorite
-        redirect_to user_favorites_path
+        redirect_to user_path(@user)
       else
         render 'users/show'
       end
