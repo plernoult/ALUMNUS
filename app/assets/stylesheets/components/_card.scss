@@ -1,3 +1,21 @@
+.profile {
+  background-color:white;
+  display:flex;
+  justify-content: flex-start;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+.profile p {
+  font-size: 40px;
+}
+
+.avatar img {
+  border-radius: 50%;
+  height:50px;
+  width:50px;
+}
+
 .card-product {
   overflow: hidden;
   height: 170px;
@@ -9,12 +27,12 @@
 
 .card-prod {
   overflow: hidden;
-  height: 60px;
+  height: 120px;
+  display: flex;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
   align-items: center;
-  width:300px;
+  width:400px;
   padding-left: 20px;
 }
 
