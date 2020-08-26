@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_one_attached :photo
+  validates :photo, presence: true
   has_many :messages
   has_many :chatrooms, through: :messages
   geocoded_by :current_city
