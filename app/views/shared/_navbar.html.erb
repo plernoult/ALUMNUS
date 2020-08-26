@@ -16,7 +16,7 @@
         </li>
         <li class="nav-item">
           <% name = "#{current_user.first_name} #{current_user.last_name}" %>
-          <%= link_to name, "#", class: "nav-link"%>
+          <%= link_to name, "/my_profile", class: "nav-link"%>
         </li>
         <li class="nav-item">
           <%= link_to "Messages", "/chatrooms", class: "nav-link" %>
@@ -27,7 +27,6 @@
               <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "My Profile", "/my_profile", class: "dropdown-item" %>
             <%= link_to "My favorites", "/users/:user_id/favorites", class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>

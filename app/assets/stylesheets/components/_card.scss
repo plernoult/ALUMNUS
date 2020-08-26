@@ -65,9 +65,26 @@
 }
 
 .contain-profile {
-  padding-top: 10px;
-  margin: auto !important;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 16px;
+  margin:38px auto !important;;
   text-align: center;
   background-color: white;
+  max-width: 500px;
+}
+
+p.show-text {
+  font-size: 18px;
+}
+
+.profile-picture-show img {
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.fa-comments, .fa-star {
+  font-size: 48px;
+  margin: 16px;;
+  &:hover {
+    text-decoration:none !important;
+  }
 }
