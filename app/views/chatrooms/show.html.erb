@@ -10,8 +10,8 @@
 </div>
 <div id="messages" data-chatroom-id="<%= @chatroom.id %>" class="container bordure">
   <% @chatroom.messages.each do |message| %>
-    <% if message.user == current_user%>
-      <div class="speech-bubble">
+    <% if current_user.first_name == @chatroom.receiver_name %>
+      <div class="speech-bubbly">
       <%= render'messages/message', message: message %>
       </div>
     <% else %>
