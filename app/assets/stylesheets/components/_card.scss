@@ -1,13 +1,16 @@
 .bordure {
   margin-top:100px;
-  margin-bottom: 120px !important;
+  margin-bottom: 52px !important;
   background-color: #ece5dd;
+  padding-bottom:3px;
 }
 
 .speech-bubble {
   position: relative;
   background: white;
   border-radius: .4em;
+  padding-left:10px;
+  padding-right: 10px;
 }
 
 .speech-bubble:after {
@@ -26,6 +29,8 @@
 
 
 .speech-bubbly {
+  padding-left:10px;
+  padding-right: 10px;
   position: relative;
   background: #dcf8c6;
   border-radius: .4em;
@@ -49,7 +54,7 @@
 #new_message {
   position: fixed !important;
   left: 0;
-  bottom: 58px;
+  bottom: 0px;
   width: 100%;
   text-align: center;
 }
@@ -151,4 +156,19 @@ p.show-text {
   }
 }
 
+@media(max-width:500px) {
+  #new_message {
+  position: fixed !important;
+  left: 0;
+  bottom: 58px;
+  width: 100%;
+  text-align: center;
+}
+  .bordure {
+    margin-top:100px;
+    margin-bottom: 110px !important;
+    background-color: #ece5dd;
+    padding-bottom: 3px;
+  }
+}
 
