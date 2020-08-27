@@ -1,12 +1,16 @@
 .bordure {
   margin-top:100px;
-  margin-bottom: 60px !important;
+  margin-bottom: 52px !important;
+  background-color: #ece5dd;
+  padding-bottom:3px;
 }
 
 .speech-bubble {
   position: relative;
-  background: #d7d5d5;
+  background: white;
   border-radius: .4em;
+  padding-left:10px;
+  padding-right: 10px;
 }
 
 .speech-bubble:after {
@@ -17,7 +21,7 @@
   width: 0;
   height: 0;
   border: 7px solid transparent;
-  border-right-color: #d7d5d5;
+  border-right-color: white;
   border-left: 0;
   margin-top: -7px;
   margin-left: -7px;
@@ -25,8 +29,10 @@
 
 
 .speech-bubbly {
+  padding-left:10px;
+  padding-right: 10px;
   position: relative;
-  background: #99f0a7;
+  background: #dcf8c6;
   border-radius: .4em;
 }
 
@@ -38,7 +44,7 @@
   width: 0;
   height: 0;
   border: 7px solid transparent;
-  border-left-color: #99f0a7;
+  border-left-color: #dcf8c6;
   border-right: 0;
   margin-top: -7px;
   margin-right: -7px;
@@ -48,7 +54,7 @@
 #new_message {
   position: fixed !important;
   left: 0;
-  bottom: 0;
+  bottom: 0px;
   width: 100%;
   text-align: center;
 }
@@ -150,7 +156,22 @@ p.show-text {
   }
 }
 
-.profile-container {
+
+@media(max-width:500px) {
+  #new_message {
+  position: fixed !important;
+  left: 0;
+  bottom: 58px;
+  width: 100%;
+  text-align: center;
+}
+  .bordure {
+    margin-top:100px;
+    margin-bottom: 110px !important;
+    background-color: #ece5dd;
+    padding-bottom: 3px;
+  }
+  .profile-container {
   min-width: 300px;
   height: auto;
 }
@@ -158,6 +179,7 @@ p.show-text {
 .profile-picture-show {
   min-width: 300px;
   height: auto; 
+
 }
 
 .bio {
