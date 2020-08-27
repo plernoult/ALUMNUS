@@ -1,6 +1,6 @@
 class FavoritesController < ApplicationController
   def index
-    @favorites = Favorite.where(user: current_user )
+    @favorites = Favorite.where(user: current_user)
   end
 
   def create
@@ -9,14 +9,14 @@ class FavoritesController < ApplicationController
     if @favorite.nil?
       @favorite = Favorite.new(favorite_user: @user)
       @favorite.user = current_user
-    
+
       if @favorite.save
         current_user.favorites << @favorite
         redirect_to user_path(@user)
       else
         render 'users/show'
       end
-    else 
+    else
       redirect_to user_path(@user)
     end
   end
