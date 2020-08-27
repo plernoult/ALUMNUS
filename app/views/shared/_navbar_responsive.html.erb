@@ -1,26 +1,26 @@
-<nav class="navbar-responsive">
+<nav class="navbar navresp fixed-bottom">
   <ul class=  "d-flex list-unstyled justify-content-center inline-list">
 
     <li>
-      <%= link_to "/users", class: "nav-link  link-home" do %>
+      <%= link_to users_path, class: "nav-link  link-home" do %>
         <i class="fas fa-home "></i>
       <%end%>
     </li>
-    
+
     <li>
-      <%= link_to "/chatrooms", class: "nav-link link-comments" do %>
+      <%= link_to chatrooms_path, class: "nav-link link-comments" do %>
         <i class="fas fa-comments"></i>
       <%end%>
     </li>
 
     <li>
-      <%= link_to "/users/:user_id/favorites", class: "nav-link link-star" do%>
+      <%= link_to user_favorites_path(current_user), class: "nav-link link-star" do%>
         <i class="fas fa-star "></i>
       <%end%>
     </li>
 
     <li>
-      <%= link_to "/my_profile", class: "nav-link user-link" do %>
+      <%= link_to user_profile_path, class: "nav-link user-link" do %>
         <i class="fas fa-user"></i>
       <%end%>
     </li>
