@@ -3,31 +3,31 @@
 
     <li>
       <%= link_to users_path, class: "nav-link  link-home" do %>
-        <i class="fas fa-home "></i>
+        <i class="fas fa-home logo-link "></i>
       <%end%>
     </li>
 
     <li>
       <%= link_to chatrooms_path, class: "nav-link link-comments" do %>
-        <i class="fas fa-comments"></i>
+        <i class="fas fa-comments logo-link"></i>
       <%end%>
     </li>
 
     <li>
-      <%= link_to user_favorites_path(current_user), class: "nav-link link-star" do%>
-        <i class="fas fa-star "></i>
+      <%= link_to user_favorites_path(:user_id), class: "nav-link link-star" do%>
+        <i class="fas fa-star logo-link"></i>
       <%end%>
     </li>
 
     <li>
       <%= link_to user_profile_path, class: "nav-link user-link" do %>
-        <i class="fas fa-user"></i>
+        <i class="fas fa-user logo-link"></i>
       <%end%>
     </li>
 
     <li>
       <%= link_to destroy_user_session_path, method: :delete, class: "nav-link sign-out-link" do%>
-        <i class="fas fa-sign-out-alt"></i>
+        <i class="fas fa-sign-out-alt logo-link"></i>
       <%end%>
     </li>
   </ul>

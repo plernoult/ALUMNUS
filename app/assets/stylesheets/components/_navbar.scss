@@ -31,11 +31,12 @@
   font-size: 26px !important;
 }
 i.fas {
-  color: white !important;
   margin-bottom:0;
   margin-top:10px;
 }
-
+.logo-link {
+  color: white !important;
+}
 @media (max-width: 500px) {
 
   .navbar-lewagon {
@@ -64,9 +65,12 @@ i.fas {
     display:none;
   }
 
+  .logo-link {
+    color: white !important;
+  }
 
   i.fas {
-    color: white !important;
+
     margin: 0 4px;
     padding-top: 6px;
   }

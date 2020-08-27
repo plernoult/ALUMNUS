@@ -4,7 +4,7 @@
     <%= cl_image_tag @user.photo.key, height: 300, width: 300, crop: :thumb %>
     <% end %>
   </div>
-  
+
   <h1><%= @user.first_name %> <%= @user.last_name %></h1>
   <p class = "show-text"><strong>Batch No</strong> <%= @user.batch_number %></p>
   <p class = "show-text"><strong>Current City:</strong> <%= @user.current_city %></p>
