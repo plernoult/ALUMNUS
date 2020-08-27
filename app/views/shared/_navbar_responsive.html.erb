@@ -1,4 +1,4 @@
-<nav class="navbar navresp fixed-bottom">
+<nav class="navbar navresp">
   <ul class=  "d-flex list-unstyled justify-content-center inline-list">
 
     <li>
@@ -21,13 +21,7 @@
 
     <li>
       <%= link_to user_profile_path, class: "nav-link user-link" do %>
-        <i class="fas fa-user logo-link"></i>
-      <%end%>
-    </li>
-
-    <li>
-      <%= link_to destroy_user_session_path, method: :delete, class: "nav-link sign-out-link" do%>
-        <i class="fas fa-sign-out-alt logo-link"></i>
+        <%= cl_image_tag current_user.photo.key, class: "avatar-nav-responsive"%>
       <%end%>
     </li>
   </ul>

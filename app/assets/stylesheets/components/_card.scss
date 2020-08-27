@@ -156,6 +156,7 @@ p.show-text {
   }
 }
 
+
 @media(max-width:500px) {
   #new_message {
   position: fixed !important;
@@ -170,5 +171,17 @@ p.show-text {
     background-color: #ece5dd;
     padding-bottom: 3px;
   }
+  .profile-container {
+  min-width: 300px;
+  height: auto;
 }
 
+.profile-picture-show {
+  min-width: 300px;
+  height: auto; 
+
+}
+
+.bio {
+  max-width: 500px;
+}
