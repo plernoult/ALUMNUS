@@ -9,6 +9,7 @@ const initChatroomCable = () => {
       received(data) {
         messagesContainer.insertAdjacentHTML('beforeend', data);
         input.value = '';
+        window.scrollTo(0,document.body.scrollHeight);
       },
     });
   }
