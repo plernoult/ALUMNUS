@@ -174,14 +174,15 @@ p.show-text {
   .profile-container {
   min-width: 300px;
   height: auto;
-}
+  }
 
-.profile-picture-show {
-  min-width: 300px;
-  height: auto; 
+  .profile-picture-show {
+    min-width: 300px;
+    height: auto;
 
-}
+  }
 
-.bio {
-  max-width: 500px;
+  .bio {
+    max-width: 500px;
+  }
 }
