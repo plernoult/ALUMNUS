@@ -1,9 +1,10 @@
 import consumer from "./consumer";
 
-const initChatroomCable = () => {
+const initChatroom = () => {
   const messagesContainer = document.getElementById('messages');
   const input = document.getElementById('message_content');
   if (messagesContainer) {
+    window.scrollTo(0,document.body.scrollHeight);
     const id = messagesContainer.dataset.chatroomId;
     consumer.subscriptions.create({ channel: "ChatroomChannel", id: id }, {
       received(data) {
@@ -15,4 +16,4 @@ const initChatroomCable = () => {
   }
 }
 
-export { initChatroomCable };
+export { initChatroom };
