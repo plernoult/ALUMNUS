@@ -27,18 +27,6 @@
   color: #474541 !important;
 }
 
-.fa-home, .fa-comments, .fa-star, .fa-user {
-  font-size: 26px !important;
-  margin: 0 26px;
-}
-i.fas {
-  margin-bottom:0;
-  margin-top:10px;
-}
-.logo-link {
-  color: white !important;
-}
-
 .fa-sign-out-alt {
   color: #1150B4;
 }
@@ -57,6 +45,19 @@ i.fas {
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 20;
+  }
+
+  .fa-home, .fa-comments, .fa-star, .fa-user {
+    font-size: 26px !important;
+    margin: 0 26px;
+  }
+  i.fas {
+    margin-bottom:0;
+    margin-top:10px;
+  }
+  .logo-link {
+    color: white !important;
   }
 
 }

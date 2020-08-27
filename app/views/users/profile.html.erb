@@ -14,7 +14,5 @@
   <p class = "show-text"><strong>BIO : </strong></p>
   <p class = "show-text p-3"><%= current_user.bio %></p>
   <%= link_to  "Edit profile", edit_user_registration_path, class:"mb-5" %>
-  <%= link_to destroy_user_session_path, method: :delete, class: "nav-link sign-out-link" do%>
-    <i class="fas fa-sign-out-alt logo-link"></i>
-  <%end%>
+  <%= link_to "logout", destroy_user_session_path, method: :delete, class: "nav-link sign-out-link mb-5"%>
 </div>
