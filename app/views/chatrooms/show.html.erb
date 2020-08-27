@@ -1,23 +1,24 @@
-<div class= "profile">
-<p><%=  link_to "⬅︎", chatrooms_path%></p>
-<div class="avatar"> <%=cl_image_tag @receiver.photo.key%></div>&nbsp;&nbsp;&nbsp;
-<% if %>
-<% current_user.first_name == @chatroom.receiver_name %>
-  <h1><%= @chatroom.sender_name %></h1>
-<% else %>
-  <h1><%= @chatroom.receiver_name %></h1>
-<% end %>
-</div>
-<div id="messages" data-chatroom-id="<%= @chatroom.id %>" class="container bordure">
-  <% @chatroom.messages.each do |message| %>
-     <%= render'messages/message', message: message, owner: current_user.id == message.user_id%>
-  <% end %>
-  <% if current_user.first_name == @chatroom.receiver_name %>
-    <% @friend = @chatroom.sender_name %>
+<body class="chatroom_show if action_name == 'chatroom_show'">
+  <div class= "profile">
+  <p><%=  link_to "⬅︎", chatrooms_path%></p>
+  <div class="avatar"> <%=cl_image_tag @receiver.photo.key%></div>&nbsp;&nbsp;&nbsp;
+  <% if %>
+  <% current_user.first_name == @chatroom.receiver_name %>
+    <h1><%= @chatroom.sender_name %></h1>
   <% else %>
-  <% @friend = @chatroom.receiver_name %>
+    <h1><%= @chatroom.receiver_name %></h1>
   <% end %>
-</div>
-<%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
-  <%= f.input :content, label: false, input_html: { autocomplete: "off" }, placeholder: "Type a message @#{@friend}" %>
-<% end %>
+  </div>
+  <div id="messages" data-chatroom-id="<%= @chatroom.id %>" class="container bordure">
+    <% @chatroom.messages.each do |message| %>
+       <%= render'messages/message', message: message, owner: current_user.id == message.user_id%>
+    <% end %>
+    <% if current_user.first_name == @chatroom.receiver_name %>
+      <% @friend = @chatroom.sender_name %>
+    <% else %>
+    <% @friend = @chatroom.receiver_name %>
+    <% end %>
+  </div>
+  <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
+    <%= f.input :content, label: false, input_html: { autocomplete: "off" }, placeholder: "Type a message @#{@friend}" %>
+  <% end %>
