@@ -21,7 +21,9 @@
 
     <li>
       <%= link_to user_profile_path, class: "nav-link user-link" do %>
-        <%= cl_image_tag current_user.photo.key, class: "avatar-nav-responsive"%>
+        <% if current_user.present? && current_user.photo.attached? %>
+          <%= cl_image_tag current_user.photo.key, class: "avatar-nav-responsive"%>
+        <%end%>
       <%end%>
     </li>
   </ul>
