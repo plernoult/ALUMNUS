@@ -3,10 +3,10 @@
   <%= form_tag users_path, method: :get do %>
     <%= text_field_tag :query,
       params[:query],
-      class: "form-control, my-3",
+      class: "form-control my-3 ",
       placeholder: "Find an alumni"
     %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
+    <%= submit_tag "Search", class: "btn btn-primary mb-3" %>
   <% end %>
 
 </div>
