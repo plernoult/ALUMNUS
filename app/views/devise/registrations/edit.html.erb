@@ -25,7 +25,7 @@
                   input_html: { autocomplete: "new-company-name" } %>
 
 
-            <%= f.input :bio, as: :text, required: false, input_html: { autocomplete: "new-company-name" }, :input_html => { class: 'bio', :cols => 5, :rows => 6 } %>
+            <%= f.input :bio, as: :text, required: false, input_html: { autocomplete: "new-company-name" }, :input_html => { class: 'bio', :cols => 5, :rows => 6, maxlength: 100 } %>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
