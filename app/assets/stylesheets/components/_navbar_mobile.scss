@@ -1,6 +1,15 @@
+  .navbar.navbar-light.light-blue.lighten-4{
+  display: none;
+  }
+
 @media (max-width: 500px) {
-  .navbar.navbar-light.light-blue.lighten-4 {
+  .navbar.navbar-light.light-blue.lighten-4{
   display: flex;
+  padding-bottom: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  // height: 60px;
   }
   .fa-1x {
   font-size: 1.5rem;
