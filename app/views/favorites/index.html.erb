@@ -1,8 +1,5 @@
-<div class="container">
-  <h1>My favorites</h1>
-</div>
-
-<ul class="container">
+<ul class="container container-myfavorite ">
+  <h1 class= myfavorite-header>My favorites</h1>
   <% @favorites.each do |favorite| %>
     <div class="card-product">
       <% if favorite.favorite_user.photo.attached? %>
