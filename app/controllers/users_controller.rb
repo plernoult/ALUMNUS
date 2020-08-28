@@ -1,13 +1,8 @@
 class UsersController < ApplicationController
   def index
+    @users_all = User.where.not(id: current_user.id)
     @current_city = current_user.current_city
-    @prox_users = User.near(@current_city , 10)
-
-    if @prox_users.length == 1
-      @users = User.where.not(id: current_user.id)
-    else
-      @users = @prox_users
-    end
+    @prox_users = User.near(@current_city , 10).where.not(id: current_user)
 
     if params[:query].present?
       sql_query = "first_name ILIKE :query \
@@ -27,6 +22,7 @@ class UsersController < ApplicationController
     end
 
   end
+
 
   def show
     @user = User.find(params[:id])
