@@ -87,7 +87,9 @@ p.show-text {
   }
 }
 
-
+  .sign-out-link {
+    color: red !important;
+  }
 @media(max-width:500px) {
   .profile-container {
   min-width: 300px;
