@@ -89,6 +89,12 @@
   width:50px;
 }
 
+.avatar-messages img {
+  border-radius: 50%;
+  height:60px;
+  width:60px;
+}
+
 @media(max-width:500px) {
   #new_message {
   position: fixed !important;
