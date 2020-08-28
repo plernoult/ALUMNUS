@@ -17,10 +17,12 @@
   cursor: pointer;
   }
   .dark-pink-text {
-  color: rgba(15,79,179,1);
+  color: white;
   }
   .light-blue {
-    background: linear-gradient(90deg, rgb(15,79,179) 15%, rgb(109,109,232) 63%, rgb(57,189,191) 100%) !important;
+    // background: linear-gradient(90deg, rgb(15,79,179) 15%, rgb(109,109,232) 63%, rgb(57,189,191) 100%) !important;
+  background: rgb(16,38,62);
+  background: linear-gradient(90deg, rgba(16,38,62,1) 0%, rgba(9,9,121,1) 49%, rgba(0,89,255,1) 100%);
   }
   .nav-link.one {
     color: white !important;
