@@ -95,6 +95,18 @@
   width:60px;
 }
 
+h1#h1-messages {
+  position: absolute;
+  font-size: 35px;
+  top: 0;
+  left: 30%;
+  color: #FFF;
+}
+
+.messages-container {
+  padding-top: 16px;
+}
+
 @media(max-width:500px) {
   #new_message {
   position: fixed !important;
@@ -102,6 +114,8 @@
   bottom: 58px;
   width: 100%;
   text-align: center;
+
+
 }
   .bordure {
     margin-top:100px;

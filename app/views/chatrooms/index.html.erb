@@ -1,5 +1,5 @@
- <div class="container">
-  <h1>Messages</h1>
+ <div class="container messages-container">
+  <h1 class = "my-3" id ="h1-messages">Messages</h1>
     <% @chatrooms_sender.each do |chatroom| %>
       <% if current_user.first_name == chatroom.receiver_name %>
         <div class="card-prod-messages ">
