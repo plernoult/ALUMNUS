@@ -1,3 +1,7 @@
+.arrow {
+  font-size:30px;
+}
+
 .bordure {
   margin-top:100px;
   margin-bottom: 52px !important;
@@ -60,18 +64,21 @@
 }
 
 .profile {
+  border: solid 1px lightgrey;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 4px;
   z-index:10;
-  background-color:white;
+  background-color: rgba(255,255,255,0.90);
   display:flex;
   justify-content: flex-start;
   align-items: center;
   position: fixed !important;
   left: 0;
-  top: 100px;
+  top: 0px;
   width: 100%;
   text-align: center;
-
 }
+
 .profile p {
   font-size: 40px;
 }
