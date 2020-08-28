@@ -13,9 +13,12 @@
   </head>
 
   <body>
+    <% unless current_page?(new_user_session_path) || current_page?(new_user_registration_path) || params[:controller] == "chatrooms" && params[:action] == "open" %>
     <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
+    <% end %>
+    <% unless current_page?(new_user_session_path) || current_page?(new_user_registration_path) || params[:controller] == "chatrooms" && params[:action] == "open" %>
     <%= render 'shared/navbar_responsive' %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
