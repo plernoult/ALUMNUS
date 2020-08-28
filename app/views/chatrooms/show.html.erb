@@ -1,6 +1,9 @@
 <body class="chatroom_show if action_name == 'chatroom_show'">
   <div class= "profile">
-  <p><%=  link_to "⬅︎", chatrooms_path%></p>
+  &nbsp;<p><%=  link_to chatrooms_path do%>
+    <i class="fas fa-reply arrow"></i>
+    <% end %>
+  </p>&nbsp;&nbsp;&nbsp;
   <div class="avatar"> <%=cl_image_tag @receiver.photo.key%></div>&nbsp;&nbsp;&nbsp;
   <% if %>
   <% current_user.first_name == @chatroom.receiver_name %>
