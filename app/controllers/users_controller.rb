@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def index
     @current_city = current_user.current_city
-    @prox_users = User.near(@current_city , 10).where.not(id: current_user)
+    @prox_users = User.near(@current_city, 10).where.not(id: current_user)
   end
 
 
