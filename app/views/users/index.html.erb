@@ -3,7 +3,7 @@
 <div class="container">
   <h3 class="my-5">Alumni around <strong><%= current_user.current_city %></strong></h3>
 </div>
-<ul class="container">
+<ul class="container user-index-container">
   <% @prox_users.each do |user| %>
   <%= link_to user_path(user),class:"text-decoration-none" do %>
   <div class="card-product">
