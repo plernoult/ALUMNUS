@@ -12,20 +12,23 @@
 
         <%= f.input :current_city,
                   required: false,
-                  input_html: { autocomplete: "new-current_city" } %>
+                  input_html: { autocomplete: "new-current_city" },
+                  placeholder: "Current city" %>
 
 
         <%= f.input :occupation,
                   required: false,
-                  input_html: { autocomplete: "new-occupation" } %>
+                  input_html: { autocomplete: "new-occupation" },
+                  placeholder: "Occupation" %>
 
 
             <%= f.input :company_name,
                   required: false,
-                  input_html: { autocomplete: "new-company-name" } %>
+                  input_html: { autocomplete: "new-company-name" },
+                  placeholder: "Company name" %>
 
 
-            <%= f.input :bio, as: :text, required: false, input_html: { autocomplete: "new-company-name" }, :input_html => { class: 'bio', :cols => 5, :rows => 6, maxlength: 100 } %>
+            <%= f.input :bio, as: :text, required: false, input_html: { autocomplete: "new-company-name" }, :input_html => { class: 'bio', :cols => 5, :rows => 6, maxlength: 100 }, placeholder: "Fill you Bio" %>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
@@ -36,14 +39,17 @@
       <%= f.input :password,
                   hint: "leave it blank if you don't want to change it",
                   required: false,
-                  input_html: { autocomplete: "new-password" } %>
+                  input_html: { autocomplete: "new-password" }, 
+                  placeholder: "New password" %>
       <%= f.input :password_confirmation,
                   required: false,
-                  input_html: { autocomplete: "new-password" } %>
+                  input_html: { autocomplete: "new-password" },
+                  placeholder: "New password" %>
       <%= f.input :current_password,
                   hint: "we need your current password to confirm your changes",
                   required: true,
-                  input_html: { autocomplete: "current-password" } %>
+                  input_html: { autocomplete: "current-password" },
+                  placeholder: "Current password" %>
     </div>
 
     <div class="form-actions">

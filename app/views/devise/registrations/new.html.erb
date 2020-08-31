@@ -11,11 +11,11 @@
       <div class = row>
       <div class="col">
         <%= f.label :first_name %>
-        <%= f.text_field :first_name, autofocus: true, class: "form-control" %>
+        <%= f.text_field :first_name, autofocus: true, class: "form-control", placeholder: "First name" %>
       </div>
         <div class="col">
         <%= f.label :last_name %>
-        <%= f.text_field :last_name, autofocus: true,  class: "form-control"  %>
+        <%= f.text_field :last_name, autofocus: true,  class: "form-control", placeholder: "Last name"  %>
       </div>
       </div>
 
@@ -23,18 +23,22 @@
       <%= f.input :current_city,
                   required: true,
                   autofocus: true,
-                  input_html: { autocomplete: "current city" }%>
+                  input_html: { autocomplete: "current city" },
+                  placeholder: "Current city"%>
       <%= f.input :email,
                   required: true,
                   autofocus: true,
-                  input_html: { autocomplete: "email" }%>
+                  input_html: { autocomplete: "email" },
+                  placeholder: "example@email.com"%>
       <%= f.input :password,
                   required: true,
                   hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                  input_html: { autocomplete: "new-password" } %>
+                  input_html: { autocomplete: "new-password" }, 
+                  placeholder: "Password" %>
       <%= f.input :password_confirmation,
                   required: true,
-                  input_html: { autocomplete: "new-password" } %>
+                  input_html: { autocomplete: "new-password" }, 
+                  placeholder: "Password confirmation" %>
 
       <%= f.input :photo, as: :file,
           required: false, hint: "Select your new photo" %>
