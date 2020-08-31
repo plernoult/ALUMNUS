@@ -6,11 +6,8 @@
         <%= cl_image_tag favorite.favorite_user.photo.key, crop: :scale %>
       <% end %>
         <div class="card-product-infos">
-          <p><%= link_to "Full Profile", user_path(favorite.favorite_user) %></p>
           <h2><%= favorite.favorite_user.first_name %> <%= favorite.favorite_user.last_name %></h2>
-          <h4><%= favorite.favorite_user.current_city %></h4>
-          <p><strong>Batch No</strong> <%= favorite.favorite_user.batch_number %></p>
-          <p><strong>Batch date:</strong> <%= favorite.favorite_user.batch_date %></p>
+          <p><strong><%= favorite.favorite_user.current_city %></strong></p>
           <p><%= favorite.favorite_user.occupation %> @<strong><%= favorite.favorite_user.company_name %></strong></p>
         </div>
     </div>
