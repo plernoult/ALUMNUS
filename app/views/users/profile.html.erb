@@ -1,4 +1,3 @@
-
 <div class="container contain-profile">
   <div class="profile-picture-show">
     <% if current_user.photo.attached? %>
@@ -7,12 +6,14 @@
   </div>
 
   <h1><%= current_user.first_name %> <%= current_user.last_name %></h1>
-  <p class = "show-text"><strong>Batch No</strong> <%= current_user.batch_number %></p>
-  <p class = "show-text"><strong>Current City:</strong> <%= current_user.current_city %></p>
-  <p class = "show-text"><strong>Batch date:</strong> <%= current_user.batch_date %></p>
-  <p class = "show-text"><%= current_user.occupation %> @<strong><%= current_user.company_name %></strong></p>
-  <p class = "show-text bio-header"><strong>BIO</strong></p>
-  <p class = "show-text p-3 text-justify"><%= current_user.bio %></p>
+  <p class="show-text"><strong>Batch No</strong> <%= current_user.batch_number %></p>
+  <p class="show-text"><strong>Current City:</strong> <%= current_user.current_city %></p>
+  <p class="show-text"><strong>Batch date:</strong> <%= current_user.batch_date %></p>
+  <p class="show-text"><%= current_user.occupation %> @<strong><%= current_user.company_name %></strong></p>
+  <p class="show-text bio-header"><strong>BIO</strong></p>
+  <div class="bio-content">
+    <p class="show-text p-3 text-justify"><%= current_user.bio %></p>
+  </div>
   <%= link_to  "Edit profile", edit_user_registration_path, class:"mb-5" %>
   <%= link_to "logout", destroy_user_session_path, method: :delete, class: "nav-link sign-out-link mb-5"%>
 </div>
