@@ -1,12 +1,15 @@
  <div class="container messages-container">
    <h1 class="my-3" id="h1-messages">Messages</h1>
-
+   
    <% @chatrooms_sender.each do |chatroom| %>
    <% if current_user.first_name == chatroom.receiver_name %>
    <%= link_to open_chatrooms_path(chatroom.sender_id), style:"text-decoration:none" do %>
    <div class="card-prod-messages ">
      <div class="avatar-messages"> <%=cl_image_tag User.find(chatroom.sender_id).photo.key%></div>&nbsp;&nbsp;&nbsp;
      <div>
+       <% if User.find(chatroom.sender_id).last_seen_at > 5.minutes.ago %>
+              <i class="badge badge-success">Online</i>&nbsp;&nbsp;
+            <% end %>
        <h3 class=chatroom-index-names><%= chatroom.sender_name %></h3>
        <% if chatroom.messages.present? %>
        <h5 class="last-message"><%= chatroom.messages.last.content.truncate(30) %></h5>
@@ -19,6 +22,9 @@
    <div class="card-prod-messages">
      <div class="avatar-messages"> <%=cl_image_tag User.find(chatroom.receiver_id).photo.key%></div>&nbsp;&nbsp;&nbsp;
      <div>
+       <% if User.find(chatroom.receiver_id).last_seen_at > 5.minutes.ago %>
+              <i class="badge badge-success">Online</i>&nbsp;&nbsp;
+            <% end %>
        <h3 class=chatroom-index-names><%= chatroom.receiver_name %></h3>
        <% if chatroom.messages.present? %>
        <h5 class="last-message"><%= chatroom.messages.last.content.truncate(30)%></h5>
@@ -35,6 +41,9 @@
    <div class="card-prod-messages">
      <div class="avatar-messages"> <%=cl_image_tag User.find(chatroom.sender_id).photo.key%></div>&nbsp;&nbsp;&nbsp;
      <div>
+        <% if User.find(chatroom.sender_id).last_seen_at > 5.minutes.ago %>
+              <i class="badge badge-success">Online</i>&nbsp;&nbsp;
+            <% end %>
        <h3 class=chatroom-index-names><%= chatroom.sender_name %></h3>
        <% if chatroom.messages.present? %>
        <h5 class="last-message"><%= chatroom.messages.last.content.truncate(30)%></h5>
@@ -47,6 +56,9 @@
    <div class="card-prod-messages">
      <div class="avatar-messages"> <%=cl_image_tag User.find(chatroom.receiver_id).photo.key%></div>&nbsp;&nbsp;&nbsp;
      <div>
+       <% if User.find(chatroom.receiver_id).last_seen_at > 5.minutes.ago %>
+              <i class="badge badge-success">Online</i>&nbsp;&nbsp;
+            <% end %>
        <h3 class=chatroom-index-names><%= chatroom.receiver_name%>&nbsp; </h3>
        <% if chatroom.messages.present? %>
        <h5 class="last-message"><%= chatroom.messages.last.content.truncate(30)%></h5>
