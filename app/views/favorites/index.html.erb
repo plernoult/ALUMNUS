@@ -11,6 +11,7 @@
           <h2><%= favorite.favorite_user.first_name %> <%= favorite.favorite_user.last_name %></h2>
           <p><strong><%= favorite.favorite_user.current_city %></strong></p>
           <p><%= favorite.favorite_user.occupation %> @<strong><%= favorite.favorite_user.company_name %></strong></p>
+          <p class="mt-0"> <i class="fas fa-map-marker-alt"></i> <%=Geocoder::Calculations.distance_between([current_user.longitude,current_user.latitude], [favorite.favorite_user.longitude,favorite.favorite_user.latitude]).round(1) %> km </p>
         </div>
     </div>
     <br>
