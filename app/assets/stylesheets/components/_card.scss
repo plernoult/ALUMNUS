@@ -53,7 +53,7 @@
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
-  margin-top: 0;
+  margin-top: 8px;
 }
 
 .card-product .card-product-infos {
@@ -109,6 +109,11 @@ p.show-text {
   .sign-out-link {
     color: red !important;
   }
+
+  .user-index-container {
+    padding-bottom: 35px;
+  }
+
 @media(max-width:500px) {
   .profile-container {
   min-width: 300px;
