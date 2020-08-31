@@ -3,6 +3,11 @@ class ChatroomsController < ApplicationController
     @user = current_user
     @chatrooms_receiver = Chatroom.where(receiver_id: @user.id)
     @chatrooms_sender = Chatroom.where(sender_id: @user.id)
+    count = 0
+    Chatroom.all.each do |chatroom|
+      count += chatroom.messages.select { |message| message.receiver_viewed != true && message.user_id != current_user.id }.count
+    end
+    @unread_messages = count
   end
 
   def show
@@ -23,6 +28,13 @@ class ChatroomsController < ApplicationController
     if @chatroom.nil?
       @chatroom = Chatroom.create(sender_id: @sender.id, receiver_id: @receiver.id, receiver_name: @receiver.first_name, sender_name: @sender.first_name)
     end
+
+    unread_messages = @chatroom.messages.select { |message| message.receiver_viewed != true && message.user_id != current_user.id }
+    unread_messages.each do |message|
+      message.receiver_viewed = true
+      message.save
+    end
+
     render 'show'
   end
 end
