@@ -1,6 +1,5 @@
  <div class="container messages-container">
-   <h1 class="my-3" id="h1-messages">Messages</h1>
-
+   <h1 class="my-3" id="h1-messages">Messages <%= @unread_messages %></h1>
    <% @chatrooms_sender.each do |chatroom| %>
    <% if current_user.first_name == chatroom.receiver_name %>
    <%= link_to open_chatrooms_path(chatroom.sender_id), style:"text-decoration:none" do %>
