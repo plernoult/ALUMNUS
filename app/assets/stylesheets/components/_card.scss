@@ -4,7 +4,7 @@
 
 .card-product {
   overflow: hidden;
-  height: 120px;
+  min-height: 120px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -14,7 +14,7 @@
 
 .card-prod {
   overflow: hidden;
-  height: 120px;
+  min-height: 120px;
   display: flex;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -53,11 +53,12 @@
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
-  margin-top: 8px;
+  margin-top: 0;
 }
 
 .card-product .card-product-infos {
   padding: 16px;
+  min-height:120px;
 }
 
 .profile-picture img {
