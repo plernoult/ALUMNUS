@@ -12,7 +12,7 @@
     <h1><%= @chatroom.receiver_name %></h1>
   <% end %>
   </div>
-  <div id="messages" data-chatroom-id="<%= @chatroom.id %>" class="container bordure">
+  <div id="messages" data-user-id="<%= current_user.id %>" data-chatroom-id="<%= @chatroom.id %>" class="container bordure">
     <% @chatroom.messages.each do |message| %>
        <%= render'messages/message', message: message, owner: current_user.id == message.user_id%>
     <% end %>
