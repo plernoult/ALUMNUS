@@ -1,0 +1,35 @@
+<div class="container">
+  <!-- <h1 id="title-nav">Alumnus</h1> -->
+  <%= form_tag user_search_path, method: :get do %>
+    <%= text_field_tag :query,
+        params[:query],
+        class: "form-control my-3 ",
+        placeholder: "Find an alumni by name, location, batch number, occupation or company ..."
+      %>
+    <%= submit_tag "Search", class: "btn btn-primary mb-3" %>
+  <% end %>
+
+</div>
+
+
+<div class="container">
+  <h3 class="mb-3">Alumni all over <strong>the world</strong></h3>
+</div>
+
+<ul class="container pb-5">
+  <% @users.each do |user| %>
+  <%= link_to user_path(user),class:"text-decoration-none"  do %>
+  <div class="card-product">
+    <% if user.photo.attached? %>
+    <%= cl_image_tag user.photo.key, crop: :scale %>
+    <% end %>
+    <div class="card-product-infos">
+      <h2><%= user.first_name %> <%= user.last_name %></h2>
+      <p><strong>Current City:</strong> <%= user.current_city %></p>
+      <p><%= user.occupation %> @<strong><%=user.company_name %></strong></p>
+    </div>
+  </div>
+  <br>
+  <% end %>
+<% end %>
+</ul>
