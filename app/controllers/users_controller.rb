@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   end
 
   def search
+    
     if params[:query].present?
       sql_query = "first_name ILIKE :query \
        OR last_name ILIKE :query \
