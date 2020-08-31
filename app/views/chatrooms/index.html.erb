@@ -47,7 +47,7 @@
    <div class="card-prod-messages">
      <div class="avatar-messages"> <%=cl_image_tag User.find(chatroom.receiver_id).photo.key%></div>&nbsp;&nbsp;&nbsp;
      <div>
-       <h3 class=chatroom-index-names><%#= link_to chatroom.receiver_name, open_chatrooms_path(chatroom.receiver_id) %>&nbsp; </h3>
+       <h3 class=chatroom-index-names><%= chatroom.receiver_name%>&nbsp; </h3>
        <% if chatroom.messages.present? %>
        <h5 class="last-message"><%= chatroom.messages.last.content.truncate(30)%></h5>
        <% end %>
