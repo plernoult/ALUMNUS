@@ -2,7 +2,7 @@
   <h1 class= myfavorite-header>My favorites</h1>
 
   <% @favorites.each do |favorite| %>
-  <%= link_to user_path(favorite.favorite_user) do %>
+  <%= link_to user_path(favorite.favorite_user), style:"text-decoration:none" do %>
     <div class="card-product">
       <% if favorite.favorite_user.photo.attached? %>
         <%= cl_image_tag favorite.favorite_user.photo.key, crop: :scale %>
