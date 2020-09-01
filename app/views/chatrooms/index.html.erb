@@ -7,7 +7,7 @@
      <div class="avatar-messages"> <%=cl_image_tag User.find(chatroom.sender_id).photo.key%></div>&nbsp;&nbsp;&nbsp;
      <div>
        <% if User.find(chatroom.sender_id).last_seen_at > 5.minutes.ago %>
-       <i class="badge badge-success">Online</i>&nbsp;&nbsp;
+       <i class="fas fa-circle"></i>&nbsp;&nbsp;
        <% end %>
        <h3 class=chatroom-index-names><%= chatroom.sender_name %></h3>
        <% if chatroom.messages.present? %>
@@ -22,7 +22,7 @@
      <div class="avatar-messages"> <%=cl_image_tag User.find(chatroom.receiver_id).photo.key%></div>&nbsp;&nbsp;&nbsp;
      <div>
        <% if User.find(chatroom.receiver_id).last_seen_at > 5.minutes.ago %>
-       <i class="badge badge-success">Online</i>&nbsp;&nbsp;
+       <i class="fas fa-circle"></i>&nbsp;&nbsp;
        <% end %>
        <h3 class=chatroom-index-names><%= chatroom.receiver_name %></h3>
        <% if chatroom.messages.present? %>
@@ -41,7 +41,7 @@
      <div class="avatar-messages"> <%=cl_image_tag User.find(chatroom.sender_id).photo.key%></div>&nbsp;&nbsp;&nbsp;
      <div>
        <% if User.find(chatroom.sender_id).last_seen_at > 5.minutes.ago %>
-       <i class="badge badge-success">Online</i>&nbsp;&nbsp;
+       <i class="fas fa-circle"></i>&nbsp;&nbsp;
        <% end %>
        <h3 class=chatroom-index-names><%= chatroom.sender_name %></h3>
        <% if chatroom.messages.present? %>
@@ -56,7 +56,7 @@
      <div class="avatar-messages"> <%=cl_image_tag User.find(chatroom.receiver_id).photo.key%></div>&nbsp;&nbsp;&nbsp;
      <div>
        <% if User.find(chatroom.receiver_id).last_seen_at > 5.minutes.ago %>
-       <i class="badge badge-success">Online</i>&nbsp;&nbsp;
+       <i class="fas fa-circle"></i>&nbsp;&nbsp;
        <% end %>
        <h3 class=chatroom-index-names><%= chatroom.receiver_name%>&nbsp; </h3>
        <% if chatroom.messages.present? %>
