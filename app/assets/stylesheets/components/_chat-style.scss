@@ -97,16 +97,16 @@
   width:60px;
 }
 
-// h1#h1-messages {
-//   position: absolute;
-//   font-size: 35px;
-//   top: 0;
-//   left: 30%;
-//   color: #FFF;
-// }
-
 .messages-container {
   padding-top: 16px;
+}
+
+.fa-circle {
+  color: #32CD32;
+  position: absolute;
+  left: 47px;
+  top: 30px;
+  font-size: 16px;
 }
 
 @media(max-width:500px) {
@@ -124,5 +124,13 @@
     margin-bottom: 110px !important;
     background-color: #ece5dd;
     padding-bottom: 3px;
+  }
+
+  .fa-circle {
+    color: #32CD32;
+    position: absolute;
+    left: 47px;
+    top: 22px;
+    font-size: 16px;
   }
 }
