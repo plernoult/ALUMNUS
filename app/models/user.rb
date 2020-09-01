@@ -13,6 +13,7 @@ class User < ApplicationRecord
 
   def ip_address
     # "185.25.194.10"
-    current_sign_in_ip.to_s
+    m = /^(?:[0-9]{1,3}\.){3}[0-9]{1,3}/.match(current_sign_in_ip.to_s)
+    m[0]
   end
 end
