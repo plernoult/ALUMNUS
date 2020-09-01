@@ -25,3 +25,4 @@
   <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
     <%= f.input :content, label: false, input_html: { autocomplete: "off" }, placeholder: "Type a message @#{@friend}" %>
   <% end %>
+</body>
