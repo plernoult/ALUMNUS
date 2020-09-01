@@ -18,6 +18,7 @@
         <%= link_to "Search an alumni", user_search_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
+        <span class="badge badge-pill badge-danger" style="float:right;margin-bottom:-10px;"><%= @unread_messages %></span>
         <%= link_to "Messages", chatrooms_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
