@@ -8,10 +8,12 @@
     </li>
 
     <li>
+    <div class="badge-div">
       <span class="badge badge-pill badge-danger badge-icon" style="float:right;margin-bottom:-10px;"><%= @unread_messages %></span>
       <%= link_to chatrooms_path, class: "nav-link link-comments" do %>
         <i class="fas fa-comments logo-link"></i>
       <%end%>
+    </div>
     </li>
 
     <li>
