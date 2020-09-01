@@ -7,7 +7,7 @@ class User < ApplicationRecord
   validates :photo, presence: true
   has_many :messages
   has_many :chatrooms, through: :messages, dependent: :destroy
-  geocoded_by :current_sign_in_ip, latitude: :latitude, longitude: :longitude
+  geocoded_by :current_sign_in_ip.to_s, latitude: :latitude, longitude: :longitude
   after_save :geocode #, if: :will_save_change_to_current_city?
   has_many :favorites, dependent: :destroy
 end
