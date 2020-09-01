@@ -32,6 +32,11 @@
 .fa-sign-out-alt {
   color: #1150B4;
 }
+
+.badge-div {
+  position: relative;
+}
+
 @media (max-width: 500px) {
 
   .navbar-lewagon {
@@ -50,7 +55,6 @@
     left: 0;
     z-index: 20;
     height: 60px;
-    position: relative;
   }
 
   .fa-home, .fa-comments, .fa-star, .fa-user, .fa-search {
