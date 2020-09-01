@@ -14,6 +14,7 @@ puts 'Creating 20 fake profiles...'
     last_name:     Faker::Name.last_name,
     email:         Faker::Internet.email,
     password: "123456",
+    last_seen_at: "2020-08-31 15:35:28",
     current_city:       ["Paris", "Lausanne", "Genève", "Londres", "Berlin", "Renens", "Lyon", "Zurich"].sample,
     batch_number:  rand(1..500),
     batch_date:    Faker::Date.between_except(from: '2014-09-23', to: '2020-08-28', excepted: '2015-01-24'),
