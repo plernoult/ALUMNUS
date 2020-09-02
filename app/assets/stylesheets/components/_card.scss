@@ -107,9 +107,9 @@ p.show-text {
 }
 
 .profile-picture-show img {
-  height: 300px;
+  height: 400px;
   margin-bottom: 16px;
-  width: 100%;
+  width: auto;
   border-bottom-left-radius: 10%;
   border-bottom-right-radius: 10%;
 }
@@ -161,7 +161,15 @@ p.show-text {
   .profile-container {
   min-width: 300px;
   height: auto;
-  }
+}
+
+.profile-picture-show img {
+  height: 300px;
+  margin-bottom: 16px;
+  width: 100%;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+}
 
   .profile-picture-show {
     min-width: 300px;
