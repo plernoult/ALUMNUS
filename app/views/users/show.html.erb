@@ -5,7 +5,7 @@
     <% end %>
   </div>
 
-  <div class="container">
+  <div class="container profile-content">
     <h1><%= @user.first_name %> <%= @user.last_name %></h1>
 
     <div class="div-grey-show mb-4"></div>
@@ -15,7 +15,7 @@
     <p class = "show-text"><strong></strong> </p>
     <p class = "show-text"><%= @user.occupation %> @<strong><%= @user.company_name %></strong></p>
     <p class = "show-text"><strong>Bio:</strong></p>
-    <p class = "show-text"><%= @user.bio %></p>
+    <p class = "show-text text-justify"><%= @user.bio %></p>
     <%= link_to open_chatrooms_path(@user) do %>
       <i class="far fa-comments" id="chat-show-logo"></i>
     <%end%>

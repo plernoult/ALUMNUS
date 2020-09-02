@@ -107,11 +107,15 @@ p.show-text {
 }
 
 .profile-picture-show img {
-  height: 300px;
+  height: 500px;
   margin-bottom: 16px;
-  width: 100%;
+  width: auto;
   border-bottom-left-radius: 10%;
   border-bottom-right-radius: 10%;
+}
+
+.profile-content {
+  padding : 0 10%
 }
 
 .fa-comments, .fa-star {
@@ -130,7 +134,7 @@ p.show-text {
 #favorites-star {
   position: absolute;
   top: 0;
-  right: 20px;
+  right: 50px;
   font-size: 30px !important;
   color: rgb(255, 255, 255);
 }
@@ -138,7 +142,7 @@ p.show-text {
 #favorites-full-star {
   position: absolute;
   top: 0;
-  right: 20px;
+  right: 50px;
   font-size: 30px !important;
   color: rgb(255, 255, 255);
 }
@@ -161,7 +165,32 @@ p.show-text {
   .profile-container {
   min-width: 300px;
   height: auto;
-  }
+}
+
+#favorites-star {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 30px !important;
+  color: rgb(255, 255, 255);
+}
+
+#favorites-full-star {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 30px !important;
+  color: rgb(255, 255, 255);
+}
+
+
+.profile-picture-show img {
+  height: 300px;
+  margin-bottom: 16px;
+  width: 100%;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+}
 
   .profile-picture-show {
     min-width: 300px;
