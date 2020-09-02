@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   after_action :update_last_seen_at, if: -> { user_signed_in? && (current_user.last_seen_at.nil? || current_user.last_seen_at < 5.minutes.ago) }
-  after_action :set_layout_variables, if: -> { user_signed_in? }
+  before_action :set_layout_variables
 
   protect_from_forgery with: :exception
 
