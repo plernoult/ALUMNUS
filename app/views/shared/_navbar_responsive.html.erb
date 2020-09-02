@@ -2,7 +2,7 @@
   <ul class=  "d-flex list-unstyled justify-content-center inline-list">
 
     <li>
-      <%= link_to users_path, class: "nav-link  link-home" do %>
+      <%= link_to users_path, class: "nav-link  link-home link-resp" do %>
         <i class="fas fa-home logo-link "></i>
       <%end%>
     </li>
@@ -10,20 +10,20 @@
     <li>
     <div class="badge-div">
       <span class="badge badge-pill badge-danger badge-icon" style="float:right;margin-bottom:-10px;"><%= @unread_messages %></span>
-      <%= link_to chatrooms_path, class: "nav-link link-comments" do %>
+      <%= link_to chatrooms_path, class: "nav-link link-comments link-resp" do %>
         <i class="fas fa-comments logo-link"></i>
       <%end%>
     </div>
     </li>
 
     <li>
-      <%= link_to user_favorites_path(:user_id), class: "nav-link link-star" do%>
+      <%= link_to user_favorites_path(:user_id), class: "nav-link link-star link-resp" do%>
         <i class="fas fa-star logo-link"></i>
       <%end%>
     </li>
 
      <li>
-      <%= link_to user_search_path , class: "nav-link link-star" do%>
+      <%= link_to user_search_path , class: "nav-link link-star link-resp" do%>
         <i class="fas fa-search logo-link"></i>
       <%end%>
     </li>

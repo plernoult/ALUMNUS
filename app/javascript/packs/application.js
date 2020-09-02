@@ -28,8 +28,11 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { initChatroom } from '../channels/chatroom_channel';
+import { navbarClick } from './navbar';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initChatroom();
+  navbarClick();
+
 });
