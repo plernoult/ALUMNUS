@@ -93,18 +93,25 @@
 p.show-text {
   font-size: 18px;
   text-align: justify;
-  margin-left: 10%;
 }
 
 .h1-show {
   text-align: justify;
-  margin-left: 10%;
+}
+
+.div-grey-show {
+  background-color: rgba(0, 0, 0, 0.479);
+  margin: 0 auto;
+  height: 2px;
+  width: 70%;
 }
 
 .profile-picture-show img {
-  height: 350px;
+  height: 300px;
   margin-bottom: 16px;
   width: 100%;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
 }
 
 .fa-comments, .fa-star {

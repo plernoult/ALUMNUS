@@ -5,16 +5,21 @@
     <% end %>
   </div>
 
-  <h1 class="h1-show"><%= @user.first_name %> <%= @user.last_name %></h1>
-  <p class = "show-text"><strong><i class="fas fa-graduation-cap"></i></strong> Batch #<%= @user.batch_number %> | <%= @user.batch_date %></p>
-  <p class = "show-text"><strong><i class="fas fa-map-marker-alt"></i></strong> <%= @user.current_city %></p>
-  <p class = "show-text"><strong></strong> </p>
-  <p class = "show-text"><%= @user.occupation %> @<strong><%= @user.company_name %></strong></p>
-  <p class = "show-text"><strong>Bio:</strong></p>
-  <p class = "show-text"><%= @user.bio %></p>
-  <%= link_to open_chatrooms_path(@user) do %>
-    <i class="far fa-comments" id="chat-show-logo"></i>
-  <%end%>
+  <div class="container">
+    <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+
+    <div class="div-grey-show mb-4"></div>
+
+    <p class = "show-text"><strong><i class="fas fa-graduation-cap"></i></strong> Batch #<%= @user.batch_number %> | <%= @user.batch_date %></p>
+    <p class = "show-text"><strong><i class="fas fa-map-marker-alt"></i></strong> <%= @user.current_city %></p>
+    <p class = "show-text"><strong></strong> </p>
+    <p class = "show-text"><%= @user.occupation %> @<strong><%= @user.company_name %></strong></p>
+    <p class = "show-text"><strong>Bio:</strong></p>
+    <p class = "show-text"><%= @user.bio %></p>
+    <%= link_to open_chatrooms_path(@user) do %>
+      <i class="far fa-comments" id="chat-show-logo"></i>
+    <%end%>
+  </div>
   <% if current_user.favorites.where(favorite_user: @user, user: current_user).any? %>
       <%= link_to user_favorite_path(@user), method: :delete do%>
         <i class="fas fa-star" id="favorites-full-star"></i>
