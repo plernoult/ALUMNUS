@@ -107,7 +107,7 @@ p.show-text {
 }
 
 .profile-picture-show img {
-  height: 400px;
+  height: 500px;
   margin-bottom: 16px;
   width: auto;
   border-bottom-left-radius: 10%;
@@ -134,7 +134,7 @@ p.show-text {
 #favorites-star {
   position: absolute;
   top: 0;
-  right: 20px;
+  right: 50px;
   font-size: 30px !important;
   color: rgb(255, 255, 255);
 }
@@ -142,7 +142,7 @@ p.show-text {
 #favorites-full-star {
   position: absolute;
   top: 0;
-  right: 20px;
+  right: 50px;
   font-size: 30px !important;
   color: rgb(255, 255, 255);
 }
@@ -166,6 +166,23 @@ p.show-text {
   min-width: 300px;
   height: auto;
 }
+
+#favorites-star {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 30px !important;
+  color: rgb(255, 255, 255);
+}
+
+#favorites-full-star {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 30px !important;
+  color: rgb(255, 255, 255);
+}
+
 
 .profile-picture-show img {
   height: 300px;
