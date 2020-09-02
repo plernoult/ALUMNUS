@@ -13,7 +13,8 @@
     <p class = "show-text"><strong><i class="fas fa-graduation-cap"></i></strong> Batch #<%= @user.batch_number %> | <%= @user.batch_date %></p>
     <p class = "show-text"><strong><i class="fas fa-map-marker-alt"></i></strong> <%= @user.current_city %></p>
     <p class = "show-text"><strong></strong> </p>
-    <p class = "show-text"><%= @user.occupation %> @<strong><%= @user.company_name %></strong></p>
+    <p class = "show-text"><i class="fas fa-briefcase"></i> <%= @user.occupation %> @<strong><%= @user.company_name %></strong></p>
+     <div class="div-grey-show-small mb-4"></div>
     <p class = "show-text"><strong>Bio:</strong></p>
     <p class = "show-text text-justify"><%= @user.bio %></p>
     <%= link_to open_chatrooms_path(@user) do %>
