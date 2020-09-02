@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
     count = 0
 
     Chatroom.all.each do |chatroom|
-      if chatroom.message.present?
+      if chatroom.messages.present?
         count += chatroom.messages.select { |message| message.receiver_viewed != true && message.user_id != current_user.id }.count
       end
     end
