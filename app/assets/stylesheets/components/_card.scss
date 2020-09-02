@@ -67,8 +67,9 @@
 }
 
 .contain-profile {
+  position: relative;
   padding: 0 0 26px 0;
-  margin:38px auto !important;
+  margin: 0 auto 38px !important;
   text-align: center;
   background-color: white;
   max-width: 500px;
@@ -91,11 +92,26 @@
 
 p.show-text {
   font-size: 18px;
+  text-align: justify;
+}
+
+.h1-show {
+  text-align: justify;
+}
+
+.div-grey-show {
+  background-color: rgba(0, 0, 0, 0.479);
+  margin: 0 auto;
+  height: 2px;
+  width: 70%;
 }
 
 .profile-picture-show img {
-  border-radius: 16px;
+  height: 300px;
   margin-bottom: 16px;
+  width: 100%;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
 }
 
 .fa-comments, .fa-star {
@@ -105,6 +121,26 @@ p.show-text {
   &:hover {
     text-decoration:none !important;
   }
+}
+
+#chat-show-logo {
+  font-size: 30px !important;
+}
+
+#favorites-star {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 30px !important;
+  color: rgb(255, 255, 255);
+}
+
+#favorites-full-star {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 30px !important;
+  color: rgb(255, 255, 255);
 }
 
   .sign-out-link {

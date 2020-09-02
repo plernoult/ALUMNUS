@@ -1,27 +1,32 @@
-<div class="container contain-profile">
+<div class="container-fluid contain-profile">
   <div class="profile-picture-show">
     <% if @user.photo.attached? %>
     <%= cl_image_tag @user.photo.key, height: 300, width: 300, crop: :thumb %>
     <% end %>
   </div>
 
-  <h1><%= @user.first_name %> <%= @user.last_name %></h1>
-  <p class = "show-text"><strong>Batch No</strong> <%= @user.batch_number %></p>
-  <p class = "show-text"><strong>Current City:</strong> <%= @user.current_city %></p>
-  <p class = "show-text"><strong>Batch date:</strong> <%= @user.batch_date %></p>
-  <p class = "show-text"><%= @user.occupation %> @<strong><%= @user.company_name %></strong></p>
-  <p class = "show-text"><strong>Bio:</strong></p>
-  <p class = "show-text"><%= @user.bio %></p>
-  <%= link_to open_chatrooms_path(@user) do %>
-    <i class="far fa-comments"></i>
-  <%end%>
+  <div class="container">
+    <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+
+    <div class="div-grey-show mb-4"></div>
+
+    <p class = "show-text"><strong><i class="fas fa-graduation-cap"></i></strong> Batch #<%= @user.batch_number %> | <%= @user.batch_date %></p>
+    <p class = "show-text"><strong><i class="fas fa-map-marker-alt"></i></strong> <%= @user.current_city %></p>
+    <p class = "show-text"><strong></strong> </p>
+    <p class = "show-text"><%= @user.occupation %> @<strong><%= @user.company_name %></strong></p>
+    <p class = "show-text"><strong>Bio:</strong></p>
+    <p class = "show-text"><%= @user.bio %></p>
+    <%= link_to open_chatrooms_path(@user) do %>
+      <i class="far fa-comments" id="chat-show-logo"></i>
+    <%end%>
+  </div>
   <% if current_user.favorites.where(favorite_user: @user, user: current_user).any? %>
       <%= link_to user_favorite_path(@user), method: :delete do%>
-        <i class="fas fa-star"></i>
+        <i class="fas fa-star" id="favorites-full-star"></i>
       <%end%>
   <% else %>
       <%= link_to user_favorites_path(@user), method: :post do%>
-        <i class="far fa-star"></i>
+        <i class="far fa-star" id="favorites-star"></i>
       <%end%>
   <%end%>
 </div>
