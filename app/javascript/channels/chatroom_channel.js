@@ -5,6 +5,8 @@ const initChatroom = () => {
   if (messagesContainer) {
     const input = document.getElementById('message_content');
     const userId = messagesContainer.dataset.userId;
+
+
     window.scrollTo(0,document.body.scrollHeight);
     const id = messagesContainer.dataset.chatroomId;
     consumer.subscriptions.create({ channel: "ChatroomChannel", id: id }, {

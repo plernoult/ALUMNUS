@@ -69,6 +69,11 @@
         <%= link_to "Messages", chatrooms_path, class: "nav-link one" %>
         <!-- <a class="nav-link one" href="#">Messages</a> -->
       </li>
+
+      <li>
+      <%= link_to "logout", destroy_user_session_path, method: :delete, class: "nav-link one sign-out-link "%>
+      
+      </li>
     </ul>
     <!-- Links -->
 
