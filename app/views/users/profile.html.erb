@@ -13,12 +13,15 @@
 
      <p class = "show-text"><strong><i class="fas fa-graduation-cap"></i></strong> Batch #<%= current_user.batch_number %> | <%= current_user.batch_date %></p>
     <p class = "show-text"><strong><i class="fas fa-map-marker-alt"></i></strong> <%= current_user.current_city %></p>
-    <p class="show-text"><%= current_user.occupation %> @<strong><%= current_user.company_name %></strong></p>
-    <p class="show-text bio-header"><strong>Bio</strong></p>
+    <p class="show-text"><i class="fas fa-briefcase"></i> <%= current_user.occupation %> @<strong><%= current_user.company_name %></strong></p>
+     <div class="div-grey-show-small mb-4"></div>
+    <p class="show-text bio-header"><strong>Bio :</strong></p>
     <div class="bio-content">
       <p class="show-text text-justify"><%= current_user.bio %></p>
     </div>
   </div>
+  <br>
+  <br>
   <%= link_to  "Edit profile", edit_user_registration_path, class:"mb-5" %>
   <%= link_to "logout", destroy_user_session_path, method: :delete, class: "nav-link sign-out-link mb-5"%>
 </div>

@@ -17,7 +17,7 @@
 
         <%= f.input :batch_date,
                   required: false,
-                  input_html: { autocomplete: "batch_date" },
+                  input_html: { autocomplete: "off" },
                   placeholder: "Batch date" %>
 
 
@@ -33,7 +33,7 @@
                   placeholder: "Company name" %>
 
 
-            <%= f.input :bio, as: :text, required: false, input_html: { autocomplete: "new-company-name" }, :input_html => { class: 'bio', :cols => 5, :rows => 6, maxlength: 100 }, placeholder: "Fill you Bio" %>
+            <%= f.input :bio, as: :text, required: false, input_html: { autocomplete: "new-company-name" }, :input_html => { class: 'bio', :cols => 5, :rows => 6, maxlength: 250 }, placeholder: "Fill you Bio" %>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
