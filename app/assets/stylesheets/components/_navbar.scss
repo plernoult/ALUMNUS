@@ -82,8 +82,13 @@
     margin-top:10px;
   }
   .logo-link {
-    color: white !important;
+    color: white;
   }
+
+  i.active {
+    color: orange !important;
+  }
+
 
 }
 
