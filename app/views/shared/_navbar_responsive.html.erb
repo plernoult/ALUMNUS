@@ -9,7 +9,10 @@
 
     <li>
     <div class="badge-div">
-      <span class="badge badge-pill badge-danger badge-icon" style="float:right;margin-bottom:-10px;"><%= @unread_messages %></span>
+
+      <% if user_signed_in? %>
+        <span class="badge badge-pill badge-danger badge-icon" style="float:right;margin-bottom:-10px;"><%= @unread_messages %></span>
+      <% end %>
       <%= link_to chatrooms_path, class: "nav-link link-comments link-resp" do %>
         <i class="fas fa-comments logo-link"></i>
       <%end%>
@@ -72,7 +75,7 @@
 
       <li>
       <%= link_to "logout", destroy_user_session_path, method: :delete, class: "nav-link one sign-out-link "%>
-      
+
       </li>
     </ul>
     <!-- Links -->
