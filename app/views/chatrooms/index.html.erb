@@ -1,5 +1,5 @@
  <div class="container messages-container">
-   <h1 class="my-3" id="h1-messages">Messages <%= @unread_messages %></h1>
+   <h3 class="mb-3" id="h1-messages">Messages <%= @unread_messages %></h3>
 
   <% unless %>
   <% @chatrooms_sender.present? || @chatrooms_receiver.present? %>
@@ -22,7 +22,7 @@
              <% if User.find(chatroom.sender_id).last_seen_at > 5.minutes.ago %>
              <i class="fas fa-circle"></i>&nbsp;&nbsp;
              <% end %>
-             <h3 class=chatroom-index-names><%= chatroom.sender_name %></h3>
+             <h4 class=chatroom-index-names><%= chatroom.sender_name %></h4>
              <% if chatroom.messages.present? %>
              <h5 class="last-message"><%= chatroom.messages.last.content.truncate(30) %></h5>
              <% end %>
@@ -37,7 +37,7 @@
              <% if User.find(chatroom.receiver_id).last_seen_at > 5.minutes.ago %>
              <i class="fas fa-circle"></i>&nbsp;&nbsp;
              <% end %>
-             <h3 class=chatroom-index-names><%= chatroom.receiver_name %></h3>
+             <h4 class=chatroom-index-names><%= chatroom.receiver_name %></h4>
              <% if chatroom.messages.present? %>
              <h5 class="last-message"><%= chatroom.messages.last.content.truncate(30)%></h5>
              <% end %>
@@ -56,7 +56,7 @@
              <% if User.find(chatroom.sender_id).last_seen_at > 5.minutes.ago %>
              <i class="fas fa-circle"></i>&nbsp;&nbsp;
              <% end %>
-             <h3 class=chatroom-index-names><%= chatroom.sender_name %></h3>
+             <h4 class=chatroom-index-names><%= chatroom.sender_name %></h4>
              <% if chatroom.messages.present? %>
              <h5 class="last-message"><%= chatroom.messages.last.content.truncate(30)%></h5>
              <% end %>
@@ -71,7 +71,7 @@
              <% if User.find(chatroom.receiver_id).last_seen_at > 5.minutes.ago %>
              <i class="fas fa-circle"></i>&nbsp;&nbsp;
              <% end %>
-             <h3 class=chatroom-index-names><%= chatroom.receiver_name%>&nbsp; </h3>
+             <h4 class=chatroom-index-names><%= chatroom.receiver_name%>&nbsp; </h4>
              <% if chatroom.messages.present? %>
              <h5 class="last-message"><%= chatroom.messages.last.content.truncate(30)%></h5>
              <% end %>

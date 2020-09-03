@@ -1,7 +1,7 @@
 <% if @prox_users.length > 0 %>
 
 <div class="container">
-  <h3 class="my-5">Alumni around <strong><%= current_user.current_city %></strong></h3>
+  <h3 class="my-3">Alumni around <strong><%= current_user.current_city %></strong></h3>
 </div>
 <ul class="container user-index-container">
   <% @prox_users.each do |user| %>
@@ -25,6 +25,6 @@
 <% else %>
 
 <div class="container mt-2">
-  <h3 class="my-5">Sorry there is no Alumni around you for now ...</h3>
+  <h3 class="my-3">Sorry there is no Alumni around you for now ...</h3>
 </div>
 <% end %>

@@ -1,5 +1,5 @@
 <ul class="container container-myfavorite ">
-  <h1 class= myfavorite-header>My favorites</h1>
+  <h3 class= "myfavorite-header my-3" >My favorites</h3>
 
   <% @favorites.each do |favorite| %>
   <%= link_to user_path(favorite.favorite_user), style:"text-decoration:none" do %>

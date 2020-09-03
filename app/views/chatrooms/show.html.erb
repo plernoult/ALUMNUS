@@ -7,9 +7,9 @@
   <div class="avatar"> <%=cl_image_tag @receiver.photo.key%></div>&nbsp;&nbsp;&nbsp;
   <% if %>
   <% current_user.first_name == @chatroom.receiver_name %>
-    <h1><%= @chatroom.sender_name %></h1>
+    <h3><%= @chatroom.sender_name %></h3>
   <% else %>
-    <h1><%= @chatroom.receiver_name %></h1>
+    <h3><%= @chatroom.receiver_name %></h3>
   <% end %>
   </div>
   <div id="messages" data-user-id="<%= current_user.id %>" data-chatroom-id="<%= @chatroom.id %>" class="container bordure">
