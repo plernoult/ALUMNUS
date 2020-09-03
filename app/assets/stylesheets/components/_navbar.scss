@@ -68,18 +68,10 @@
     margin-top: 3px;
     margin-left: 13px;
   }
-
-  .nav-link.link-star {
-
-  }
-
+  
   .fa-home, .fa-comments, .fa-star, .fa-user, .fa-search {
     font-size: 20px !important;
-    margin: 5px 0;
-  }
-
-  .nav-link.link-comments {
-    padding-right: 2px;
+    margin: 5px 10px;
   }
 
   i.fas {
@@ -113,11 +105,21 @@
 
   .fa-home, .fa-comments, .fa-star, .fa-user, .fa-search  {
     font-size: 20px !important;
-    margin: 0;
+    margin: 0 5px;
   }
 
     .nav-link {
       padding-top: 0;
+    }
+
+    .nav-link.user-link {
+      padding-left: 0;
+    }
+
+    .avatar-nav-responsive {
+      height: 32px;
+      width: 32px;
+      margin-top: 11px;
     }
 
 }
