@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   after_action :update_last_seen_at, if: -> { user_signed_in? && (current_user.last_seen_at.nil? || current_user.last_seen_at < 5.minutes.ago) }
-  before_action :set_layout_variables
+  before_action :set_layout_variables, except: -> { params[:controller] == 'devise/sessions'  || params[:controller] == 'devise/registration' }
 
   protect_from_forgery with: :exception
 
@@ -14,15 +14,10 @@ class ApplicationController < ActionController::Base
 
   def set_layout_variables
     count = 0
-
-    if user_signed_in?
-      Chatroom.all.each do |chatroom|
-        if chatroom.messages.present?
-          count += chatroom.messages.select { |message| message.receiver_viewed != true && message.user_id != current_user.id }.count
-        end
-      end
-      @unread_messages = count
+    Chatroom.all.each do |chatroom|
+      count += chatroom.messages.select { |message| message.receiver_viewed != true && message.user_id != current_user.id }.count
     end
+    @unread_messages = count
   end
 
   protected
