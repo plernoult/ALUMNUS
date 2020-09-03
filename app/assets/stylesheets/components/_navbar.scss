@@ -67,8 +67,9 @@
     width: 32px;
     margin-top: 3px;
     margin-left: 13px;
+    object-fit: cover;
   }
-  
+
   .fa-home, .fa-comments, .fa-star, .fa-user, .fa-search {
     font-size: 20px !important;
     margin: 5px 10px;
