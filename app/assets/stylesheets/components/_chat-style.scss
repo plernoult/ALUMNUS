@@ -114,6 +114,12 @@
   font-size: 26px;
 }
 
+.message-content {  
+  color: rgba(0, 0, 0, 0.808) ;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
 @media(max-width:500px) {
   #new_message {
   position: fixed !important;

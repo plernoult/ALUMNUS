@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>ALUMNUS</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <link href="/assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-  </head>
+<head>
+  <title>ALUMNUS</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <link href="/assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-  <body>
-    <% unless current_page?(new_user_session_path) || current_page?(new_user_registration_path) || params[:controller] == "chatrooms" && params[:action] == "open" %>
-    <%= render 'shared/navbar' %>
-    <% end %>
-    <% unless current_page?(new_user_session_path) || current_page?(new_user_registration_path) || params[:controller] == "chatrooms" && params[:action] == "open" %>
-    <%= render 'shared/navbar_responsive' %>
-    <% end %>
-    <%= yield %>
-  </body>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <% unless current_page?(new_user_session_path) || current_page?(new_user_registration_path) || params[:controller] == "chatrooms" && params[:action] == "open" %>
+  <%= render 'shared/navbar' %>
+  <% end %>
+  <% unless current_page?(new_user_session_path) || current_page?(new_user_registration_path) || params[:controller] == "chatrooms" && params[:action] == "open" %>
+  <%= render 'shared/navbar_responsive' %>
+  <% end %>
+  <%= yield %>
+</body>
+
 </html>
