@@ -17,9 +17,14 @@
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-lewagon  {
   width: 40px;
 }
+
+.navbar-brand img {
+  margin-right: 0;
+}
+
 #logo {
   width: 70px;
 }
@@ -65,7 +70,7 @@
   }
 
   .nav-link.link-star {
-    
+
   }
 
   .fa-home, .fa-comments, .fa-star, .fa-user, .fa-search {
@@ -86,7 +91,7 @@
   }
 
   i.active {
-    color: orange !important;
+    color: #f48c06 !important;
   }
 
 
