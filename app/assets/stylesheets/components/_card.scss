@@ -153,17 +153,17 @@ p.show-text {
 
 #favorites-star {
   position: absolute;
-  top: 0;
-  right: 50px;
-  font-size: 30px !important;
+  top: 60px;
+  right: 55px;
+  font-size: 35px !important;
   color: rgb(255, 255, 255);
 }
 
 #favorites-full-star {
   position: absolute;
-  top: 0;
-  right: 50px;
-  font-size: 30px !important;
+  top: 44px;
+  right: 39px;
+  font-size: 35px !important;
   color: rgb(255, 255, 255);
 }
 
@@ -189,16 +189,16 @@ p.show-text {
 
 #favorites-star {
   position: absolute;
-  top: 0;
-  right: 20px;
+  top: 50px;
+  right: 40px;
   font-size: 30px !important;
   color: rgb(255, 255, 255);
 }
 
 #favorites-full-star {
   position: absolute;
-  top: 0;
-  right: 20px;
+  top: 45px;
+  right: 34px;
   font-size: 30px !important;
   color: rgb(255, 255, 255);
 }
@@ -221,4 +221,24 @@ p.show-text {
   .bio {
     max-width: 500px;
   }
+}
+
+@media(max-width: 320px) {
+
+  #favorites-star {
+    position: absolute;
+    top: 56px;
+    right: 41px;
+    font-size: 30px !important;
+    color: rgb(255, 255, 255);
+  }
+  
+  #favorites-full-star {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    font-size: 30px !important;
+    color: rgb(255, 255, 255);
+  }
+
 }
