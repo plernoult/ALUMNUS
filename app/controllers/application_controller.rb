@@ -14,7 +14,10 @@ class ApplicationController < ActionController::Base
 
   def set_layout_variables
     count = 0
-    Chatroom.all.each do |chatroom|
+    Chatroom.where(receiver_id: current_user.id).each do |chatroom|
+      count += chatroom.messages.select { |message| message.receiver_viewed != true && message.user_id != current_user.id }.count
+    end
+    Chatroom.where(sender_id: current_user.id).each do |chatroom|
       count += chatroom.messages.select { |message| message.receiver_viewed != true && message.user_id != current_user.id }.count
     end
     @unread_messages = count
