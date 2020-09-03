@@ -54,13 +54,29 @@
     bottom: 0;
     left: 0;
     z-index: 20;
-    height: 60px;
+    height: 53px;
+  }
+
+  .avatar-nav-responsive {
+    height: 32px;
+    width: 32px;
+    margin-top: 3px;
+    margin-left: 13px;
+  }
+
+  .nav-link.link-star {
+    
   }
 
   .fa-home, .fa-comments, .fa-star, .fa-user, .fa-search {
     font-size: 20px !important;
-    margin: 0;
+    margin: 5px 0;
   }
+
+  .nav-link.link-comments {
+    padding-right: 2px;
+  }
+
   i.fas {
     margin-bottom:0;
     margin-top:10px;
@@ -89,5 +105,10 @@
     font-size: 20px !important;
     margin: 0;
   }
+
+    .nav-link {
+      padding-top: 0;
+    }
+
 }
 

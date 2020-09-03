@@ -5,7 +5,7 @@
 @media (max-width: 500px) {
   .navbar.navbar-light.light-blue.lighten-4{
   display: flex;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   position: sticky;
   top: 0;
   z-index: 2;
@@ -34,10 +34,7 @@
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 35px;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 30%;
-  //   margin-top: 24px;
+    margin-bottom: 0;
   }
   .badge-icon {
     left: 45px;
